@@ -35,8 +35,15 @@
 		margin: 0 auto;
 		max-width: 300px;
 
+		&-img {
+			display: none;
+
+			@media (max-width: 768px) {
+				display: block;
+			}
+		}
+
 		li {
-			background: #fff;
 			position: relative;
 			margin-bottom: 25px;
 
@@ -64,6 +71,11 @@
 				width: 100%;
 				padding: 30px 0;
 				position: relative;
+				background: #fff;
+
+				@media (max-width: 768px) {
+					margin-bottom: 15px;
+				}
 
 				&:after,
 				&:before {

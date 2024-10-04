@@ -12,36 +12,6 @@
 		}
 	}
 
-	// .partners {
-	// 	max-width: 450px;
-	// 	margin: 0 auto 40px auto;
-
-	// 	.partners-item {
-	// 		font-size: 0;
-	// 		line-height: 0;
-	// 		background: #fff;
-	// 		text-align: center;
-	// 		margin-bottom: 15px;
-	// 		vertical-align: top;
-
-	// 		img {
-	// 			vertical-align: top;
-
-	// 		}
-
-	// 		&:hover {
-
-	// 			img {
-	// 				-webkit-filter: grayscale(100%);
-	// 				-webkit-filter: grayscale(1);
-	// 				filter: grayscale(100%);
-	// 				filter: url('../img/gray.svg#grayscale');
-	// 				filter: gray;
-	// 			}
-	// 		}
-	// 	}
-	// }
- 
 	.partners {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
@@ -58,8 +28,13 @@
 		&-item {
       max-width: 220px;
 
+			&:hover img {
+				filter: grayscale(100%);
+			}
+
 			& img {
 				width: 100%;
+				transition: all .3s;
 			}
 		}
 	}
