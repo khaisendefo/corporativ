@@ -1,0 +1,293 @@
+* {
+	@include box-sizing(border-box);
+}
+*:before,
+*:after {
+	@include box-sizing(border-box);
+}
+
+
+// Body reset
+
+html {
+	font-size: 10px;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+body {
+	font-family: $font-base;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	color: $text-color;
+	background-color: $body-bg;
+}
+
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+
+.container {
+	position: relative;
+	@include clearfix();
+}
+
+
+// Links
+
+a {
+	color: $link-color;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		outline: none;
+	}
+
+}
+
+
+// Headings
+
+h1, h2, h3, h4 {
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+}
+
+h2 {
+	font-size: 28px;
+	line-height: 1.25;
+	text-align: center;
+	max-width: 960px;
+	margin: 0 auto 35px auto;
+	font-family: $font-head;
+
+	@media (min-width: $screen-sm-min) {
+		font-size: 40px;
+	}
+}
+
+p {
+	padding: 0;
+	margin: 0 0 10px 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#tooltip {
+	display: none;
+	width: 280px;
+	z-index: 999;
+	font-size: 15px;
+	line-height: 25px;
+	padding: 25px 25px;
+	position: absolute;
+	background: #ffffff;
+	@include box-shadow(0px 0px 20px 0px rgba(0, 0, 0, 0.3));
+
+
+	&:before {
+		width: 43px;
+		height: 22px;
+		top: 100%;
+		left: 50%;
+		content: '';
+		margin-left: -22px;
+		position: absolute;
+		background: url("../img/tooltip__arrow.png") 0 0 no-repeat;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	@media (min-width: $screen-sm-min) {
+		display: block;
+	}
+}
+
+
+
+.modal {
+	max-width: 360px;
+	margin: 0 auto;
+	background: #2d1942;
+
+	.form-head {
+		background: #2d1942;
+		position: relative;
+		padding: 20px 20px 20px 20px;
+
+		.form-title {
+			color: #fff;
+			font-size: 20px;
+			font-weight: 700;
+			text-align: center;
+			margin-bottom: 15px;
+			font-family: $font-head;
+		}
+
+		.form-subtitle {
+			color: #fff;
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 20px;
+			text-align: center;
+		}
+	}
+
+	.form-content {
+		padding: 5px 20px 40px 20px;
+		position: relative;
+		background: #2d1942;
+
+		.form-group {
+			max-width: 300px;
+			margin: 0 auto 20px auto;
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+
+		width: 480px;
+		max-width: inherit;
+
+		.form-head {
+			padding: 30px 60px 20px 60px;
+
+			.form-title {
+				font-size: 30px;
+
+				span {
+					display: block;
+				}
+			}
+
+			.form-subtitle {
+				font-size: 18px;
+				line-height: 24px;
+
+			}
+		}
+
+		.form-content {
+			padding: 5px 80px 35px 80px;
+
+		}
+
+		.btn {
+			width: 100%;
+			margin-top: 15px;
+		}
+	}
+}
+
+
+.review-modal {
+	background: #fff;
+	max-width: 800px;
+	padding: 30px 20px;
+
+	.review-author {
+		font-size: 22px;
+		font-weight: 700;
+		line-height: 24px;
+		margin-bottom: 5px;
+		color: $color-purple;
+		font-family: $font-head;
+	}
+
+	.review-social {
+		color: #4497dd;
+		font-size: 14px;
+		line-height: 20px;
+		font-style: italic;
+		margin-bottom: 25px;
+		display: inline-block;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.review-quote {
+		max-width: 480px;
+		color: #484848;
+		min-height: 42px;
+		font-size: 16px;
+		line-height: 22px;
+		padding-left: 60px;
+		margin-bottom: 20px;
+		background: url("../img/icon-quote-gray.png") 0 3px no-repeat;
+	}
+
+	.review-text {
+		color: #484848;
+		font-size: 15px;
+		line-height: 24px;
+	}
+
+	@media (min-width: $screen-sm-min) {
+
+		.review-author {
+			font-size: 26px;
+			line-height: 30px;
+		}
+
+		.review-social {
+			font-size: 16px;
+			margin-bottom: 40px;
+		}
+
+		.review-quote {
+			font-size: 18px;
+			line-height: 22px;
+		}
+
+		.review-text {
+			font-size: 16px;
+			line-height: 26px;
+		}
+	}
+}
+
+
+.modal-content {
+	max-width: 960px;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 22px;
+	padding: 25px 20px;
+
+	h3 {
+		font-size: 24px;
+		line-height: 30px;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	li {
+		margin-bottom: 15px;
+	}
+
+	@media (min-width: $screen-sm-min) {
+
+		font-size: 20px;
+		line-height: 30px;
+		padding: 30px 35px;
+	}
+}

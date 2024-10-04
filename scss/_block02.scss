@@ -1,0 +1,165 @@
+.b02 {
+	z-index: 30;
+	position: relative;
+	padding-top: 80px;
+	padding-bottom: 20px;
+	background: url("../img/b02__bg_sm.jpg");
+
+	&:before {
+		z-index: 32;
+		left: 50%;
+		bottom: 0;
+		content: '';
+		width: 662px;
+		height: 984px;
+		display: none;
+		position: absolute;
+		margin-left: -241px;
+		background: url("../img/b02__man.png") 0 0 no-repeat;
+	}
+
+	.container {
+		z-index: 35;
+	}
+
+	h2 {
+		margin-bottom: 50px;
+
+		 span {
+			 display: block;
+		 }
+	}
+
+
+	.emotion {
+		margin: 0 auto;
+		max-width: 300px;
+
+		li {
+			background: #fff;
+			position: relative;
+			margin-bottom: 25px;
+
+			&:after,
+			&:before {
+				top: 10px;
+				width: 7px;
+				z-index: 40;
+				height: 7px;
+				content: '';
+				position: absolute;
+				background: #d3d3d3;
+				@include border-radius(50%);
+			}
+
+			&:after {
+				left: 10px;
+			}
+
+			&:before {
+				right: 10px;
+			}
+
+			.emotion-inner {
+				width: 100%;
+				padding: 30px 0;
+				position: relative;
+
+				&:after,
+				&:before {
+					bottom: 10px;
+					width: 7px;
+					z-index: 40;
+					height: 7px;
+					content: '';
+					position: absolute;
+					background: #d3d3d3;
+					@include border-radius(50%);
+				}
+
+				&:after {
+					left: 10px;
+				}
+
+				&:before {
+					right: 10px;
+				}
+			}
+
+
+			&:first-child {
+
+			}
+
+			&:last-child {
+
+			}
+		}
+
+		h4 {
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 26px;
+			text-align: center;
+			color: $color-purple;
+			margin-bottom: 20px;
+			font-family: $font-head;
+		}
+
+		p {
+			font-size: 14px;
+			line-height: 20px;
+			margin-bottom: 0;
+			padding: 0 25px;
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+		padding-top: 50px;
+
+		.emotion {
+			width: 300px;
+			max-width: inherit;
+
+			&.emotion-left {
+				float: left;
+
+				li {
+
+					&:first-child {
+						margin-bottom: 35px;
+					}
+
+					&:last-child {
+
+						h4 {
+							margin-bottom: 25px;
+						}
+					}
+				}
+			}
+
+			&.emotion-right {
+				float: right;
+			}
+
+			h4 {
+				font-size: 18px;
+			}
+
+			p {
+				font-size: 16px;
+				line-height: 22px;
+			}
+		}
+	}
+
+
+	@media (min-width: $screen-md-min) {
+		padding-top: 120px;
+
+		&:before {
+			display: block;
+		}
+	}
+}

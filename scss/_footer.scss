@@ -1,0 +1,295 @@
+.footer {
+	color: #484848;
+	padding-top: 20px;
+	padding-bottom: 30px;
+
+	.header__logo {
+		width: 60px;
+		display: block;
+		margin: 0 auto 15px auto;
+	}
+
+	.header-left {
+		text-align: center;
+
+		li {
+			margin-bottom: 10px;
+
+			&:first-child {
+
+				strong {
+					display: block;
+					font-size: 22px;
+					font-weight: 900;
+					line-height: 22px;
+					color: $color-purple;
+				}
+
+				span {
+					display: block;
+					color: #484848;
+					font-size: 16px;
+					font-weight: 300;
+					line-height: 22px;
+				}
+			}
+
+			&:last-child {
+				font-size: 16px;
+				line-height: 22px;
+				margin-bottom: 10px;
+
+				span {
+					display: block;
+					line-height: 16px;
+					font-weight: 300;
+					margin-bottom: 3px;
+				}
+
+				strong {
+					display: block;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+
+	.header-right {
+		text-align: center;
+
+		li {
+
+			&:first-child {
+				font-size: 16px;
+				margin-bottom: 15px;
+
+				a {
+					color: #484848;
+
+					span {
+						color: #484848;
+						font-weight: 300;
+						line-height: 16px;
+						margin-bottom: 3px;
+						display: inline-block;
+					}
+
+					strong {
+						font-weight: 900;
+						color: $color-blue;
+						line-height: 22px;
+						border-bottom: 1px solid $color-blue;
+					}
+				}
+			}
+
+			&:last-child {
+
+				a {
+					font-size: 22px;
+					font-weight: 900;
+					line-height: 22px;
+					color: #7844af !important;
+					text-decoration: none !important;
+				}
+
+				span {
+					display: block;
+					font-size: 12px;
+					font-weight: 300;
+					line-height: 22px;
+				}
+			}
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+		padding-top: 30px;
+
+		.header__logo {
+			top: 20px;
+			left: 50%;
+			margin: 0;
+			margin-left: -30px;
+			position: absolute;
+		}
+
+		.header-left {
+			float: left;
+			width: 300px;
+			text-align: left;
+
+			li {
+				&:first-child {
+					margin-bottom: 5px;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.header-right {
+
+			li {
+				width: 300px;
+				float: right;
+				text-align: right;
+
+
+				&:first-child {
+					margin-bottom: 10px;
+				}
+
+				&:last-child {
+					text-align: right;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	@media (min-width: $screen-md-min) {
+		padding-top: 50px;
+		padding-bottom: 35px;
+
+		.header__logo {
+			top: -10px;
+		}
+
+		.header-left {
+			width: 430px;
+
+			li {
+				&:first-child {
+					float: left;
+					width: 225px;
+					margin-bottom: 0;
+				}
+
+				&:last-child {
+					float: left;
+					width: 205px;
+					padding-left: 24px;
+					background: url("../img/header__location.png") 0 2px no-repeat;
+				}
+			}
+		}
+
+
+		.header-right {
+			width: 410px;
+			float: right;
+			text-align: left;
+
+			li {
+				text-align: left;
+
+				&:first-child {
+					float: left;
+					width: 200px;
+					margin-top: -2px;
+					margin-bottom: 0;
+					padding-left: 24px;
+					background: url("../img/header__present.png") 0 4px no-repeat;
+				}
+
+				&:last-child {
+					float: right;
+					width: 210px;
+					text-align: right;
+				}
+			}
+		}
+	}
+}
+
+.nav {
+	padding: 20px 0;
+	background: $color-purple;
+
+	.navbar {
+		font-size: 0;
+		line-height: 0;
+		text-align: center;
+
+		li {
+			padding: 0 10px;
+			text-align: center;
+			display: inline-block;
+
+			a {
+				color: #fff;
+				font-size: 14px;
+				line-height: 20px;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	@media (min-width: $screen-md-min) {
+
+		.navbar {
+			width: 100%;
+			display: table;
+
+			li {
+				display: table-cell;
+				vertical-align: middle;
+			}
+		}
+
+	}
+}
+
+.footer-bottom {
+	padding: 10px 0 40px 0;
+	background: #fff;
+	text-align: center;
+
+	a {
+		color: #4a4a4a;
+		font-size: 14px;
+		line-height: 20px;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.madein {
+		color: #444;
+		height: 30px;
+		font-size: 14px;
+		line-height: 20px;
+		display: inline-block;
+		text-decoration: none;
+		vertical-align: middle;
+		padding: 5px 95px 0 5px;
+		background: url("../img/creator-logo.png") 100% 50% no-repeat;
+
+
+		span {
+			display: inline-block;
+			border-bottom: 1px solid #444;
+		}
+	}
+
+	.footer-left {
+		margin-bottom: 10px;
+	}
+
+	@media (min-width: $screen-sm-min) {
+
+		.footer-left {
+			text-align: left;
+			margin-bottom: 0;
+		}
+
+		.footer-right {
+			text-align: right;
+		}
+	}
+}

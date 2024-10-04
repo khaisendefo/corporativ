@@ -1,0 +1,69 @@
+.thanks {
+	height: 739px;
+	padding-top: 170px;
+	background: #fff url("../img/thanks.jpg") 50% 0 no-repeat;
+
+
+	@media (min-width: $screen-md-min) {
+		padding-top: 245px;
+	}
+}
+
+
+.thanks {
+
+	.thanks-box {
+		margin: 0 auto;
+		max-width: 550px;
+		text-align: center;
+
+	}
+
+	.thanks-top {
+		color: #fff;
+		height: 150px;
+		font-size: 30px;
+		line-height: 35px;
+		position: relative;
+		font-family: $font-head;
+		padding: 65px 30px 0 30px;
+		background: url("../img/thanks-box.png") 50% 0 no-repeat;
+
+		&:before {
+			left: 0;
+			right: 0;
+			top: 40px;
+			content: '';
+			height: 7px;
+			display: none;
+			position: absolute;
+			background: url("../img/thanks-line.png") 50% 0 no-repeat;
+		}
+	}
+
+	.thanks-bottom {
+		color: #484848;
+		font-size: 22px;
+		line-height: 28px;
+		padding: 25px 30px 20px 30px;
+		background: rgba(255,255,255, 0.9);
+
+		p {
+			margin-bottom: 22px;
+		}
+	}
+
+
+	@media (min-width: $screen-md-min) {
+
+		.thanks-top {
+			font-size: 45px;
+			line-height: 50px;
+			padding-top: 80px;
+
+			&:before {
+				display: block;
+			}
+		}
+	}
+}

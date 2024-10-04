@@ -1,0 +1,161 @@
+.b12 {
+	background: url("../img/b12__bg.jpg") 50% 0 no-repeat;
+
+	.container {
+		padding-top: 70px;
+		padding-bottom: 50px;
+	}
+
+	.form-block {
+		max-width: 360px;
+		margin: 0 auto;
+		background: #fff;
+
+		.form-head {
+			background: #fff;
+			position: relative;
+			padding: 50px 20px 20px 20px;
+
+			&:before {
+				left: 50%;
+				top: -19px;
+				content: '';
+				width: 76px;
+				height: 19px;
+				margin-left: -38px;
+				position: absolute;
+				background: url("../img/b04__box_top.png") 0 0 no-repeat;
+			}
+
+			&:after {
+				top: 4px;
+				left: 50%;
+				content: '';
+				z-index: 50;
+				width: 30px;
+				height: 30px;
+				margin-left: -15px;
+				position: absolute;
+				background: url("../img/b12__form_icon.png") 0 0 no-repeat;
+			}
+
+
+			.form-title {
+				color: $color-purple;
+				font-size: 20px;
+				line-height: 1;
+				font-weight: 700;
+				text-align: center;
+				margin-bottom: 20px;
+				font-family: $font-head;
+
+				span {
+					display: block;
+				}
+			}
+
+			.form-subtitle {
+				color: #484848;
+				font-size: 14px;
+				font-weight: 300;
+				line-height: 20px;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+		}
+
+		.form-list {
+
+			li {
+				font-size: 14px;
+				font-weight: 300;
+				line-height: 20px;
+				padding-left: 30px;
+				margin-bottom: 20px;
+				background: url("../img/b12__check.png") 0 5px no-repeat;
+
+				b {
+					font-weight: 900;
+				}
+			}
+		}
+
+		.form-content {
+			padding: 25px 20px 40px 20px;
+			position: relative;
+			background: #2d1942;
+
+			.form-group {
+				max-width: 300px;
+				margin: 0 auto 15px auto;
+			}
+		}
+
+		.form-text {
+			color: #fff;
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 22px;
+			text-align: center;
+			margin-bottom: 25px;
+		}
+
+		p {
+			color: #fff;
+			padding-top: 5px;
+			margin-bottom: 0;
+		}
+	}
+
+
+	@media (min-width: $screen-sm-min) {
+
+		.container {
+			height: 912px;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+
+		.form-block {
+			width: 540px;
+			bottom: 0;
+			right: 10px;
+			max-width: inherit;
+			position: absolute;
+
+			.form-head {
+				height: 520px;
+				padding: 50px 20px 20px 30px;
+				background: #fff url("../img/b12__form_decor.png") 50% 20px no-repeat;
+
+				.form-title {
+					font-size: 36px;
+
+					span {
+						display: block;
+					}
+				}
+
+				.form-subtitle {
+					font-size: 18px;
+					line-height: 24px;
+
+				}
+			}
+
+			.form-list {
+
+				li {
+					font-size: 16px;
+					line-height: 26px;
+				}
+			}
+
+			.form-content {
+				padding: 35px 70px 30px 70px;
+
+			}
+		}
+	}
+}

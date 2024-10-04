@@ -1,0 +1,37 @@
+.btn {
+	margin:0;
+	color: #fff;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 20px;
+	text-align: center;
+	position: relative;
+	padding: 15px 20px;
+	background: #f38021;
+	display: inline-block;
+	text-decoration: none;
+	vertical-align: middle;
+	background-image: none;
+	touch-action: manipulation;
+	@include border-radius(25px);
+	@include transition(.3s);
+
+	&:hover {
+		color: #fff;
+		background: #e76800;
+		text-decoration: none;
+	}
+
+	&:active {
+		top: 1px;
+	}
+
+	@media (min-width: $screen-md-min) {
+		font-size: 18px;
+		padding: 20px 30px;
+		@include border-radius(30px);
+	}
+}

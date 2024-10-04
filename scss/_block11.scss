@@ -1,0 +1,311 @@
+.b11 {
+	padding: 50px 0;
+	background: url("../img/b11__bg.jpg");
+
+	h2 {
+		margin-bottom: 20px;
+		color: $color-purple;
+	}
+
+	.subtitle {
+		font-size: 18px;
+		line-height: 22px;
+		text-align: center;
+		margin-bottom: 45px;
+	}
+
+	.price {
+
+	}
+
+
+	.price-footer {
+		background: #fff;
+
+		li {
+			text-align: center;
+			padding-top: 25px;
+			padding-bottom: 25px;
+
+			&:first-child {
+				display: none;
+			}
+		}
+	}
+
+	.price-table {
+		width: 100%;
+
+		tr {
+
+			&:nth-child(odd) {
+				background: #f2f2f2;
+			}
+
+			&:nth-child(even) {
+				background: #fff;
+
+				td {
+					&:nth-child(3) {
+						background: #f8f8f8;
+					}
+				}
+			}
+
+			&.price-value {
+
+				td {
+					font-size: 20px;
+					font-weight: 900;
+
+					&:nth-child(3) {
+						color: $color-purple;
+					}
+				}
+			}
+
+			th {
+				padding: 10px 10px;
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 15px;
+				text-align: center;
+
+				&:nth-child(3) {
+					color: $color-purple;
+				}
+			}
+
+
+			td {
+				font-size: 14px;
+				line-height: 20px;
+				text-align: center;
+				padding: 10px 15px;
+
+				&:first-child {
+					text-align: left;
+				}
+
+				&.action-row {
+					color: #f38021;
+				}
+			}
+		}
+	}
+
+	.price-box {
+		max-width: 300px;
+		margin: 0 auto;
+
+		> li {
+			background: #fff;
+			position: relative;
+			margin-bottom: 25px;
+			text-align: center;
+
+			&:after,
+			&:before {
+				top: 10px;
+				width: 7px;
+				z-index: 40;
+				height: 7px;
+				content: '';
+				position: absolute;
+				background: #d3d3d3;
+				@include border-radius(50%);
+			}
+
+
+			&:after {
+				left: 10px;
+			}
+
+			&:before {
+				right: 10px;
+			}
+
+			.price-box-inner {
+				width: 100%;
+				padding: 40px 20px;
+				position: relative;
+
+				&:after,
+				&:before {
+					bottom: 10px;
+					width: 7px;
+					z-index: 40;
+					height: 7px;
+					content: '';
+					position: absolute;
+					background: #d3d3d3;
+					@include border-radius(50%);
+				}
+
+				&:after {
+					left: 10px;
+				}
+
+				&:before {
+					right: 10px;
+				}
+			}
+		}
+
+		.price-action {
+			width: 99px;
+			height: 28px;
+			margin: -15px auto 10px auto;
+			background: url("../img/b11__action.png") 50% 0 no-repeat;
+		}
+
+		.price-text {
+			padding: 10px 0;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 26px;
+			color: $color-purple;
+			margin-bottom: 10px;
+		}
+
+		.price-cost {
+			font-size: 30px;
+			font-weight: 900;;
+		}
+
+		.price-info {
+			text-align: left;
+			margin-bottom: 15px;
+
+			li {
+				font-size: 14px;
+				line-height: 20px;
+				margin-bottom: 8px;
+				position: relative;
+				padding-left: 15px;
+
+				&:before {
+					left: 0;
+					top: 8px;
+					content: '';
+					width: 6px;
+					height: 6px;
+					position: absolute;
+					background: $color-purple;
+					@include border-radius(50%);
+				}
+
+				&.orange {
+					color: #f38021;
+
+					&:before {
+						background: #f38021;
+					}
+				}
+
+				&.gray {
+					color: #c0c0c0;
+
+					&:before {
+						background: #c0c0c0;
+					}
+				}
+			}
+		}
+
+		.price-order {
+
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+		padding: 95px 0 85px 0;
+
+		h2 {
+			span {
+				display: block;
+			}
+		}
+
+		.price {
+			background: #fff;
+			border: 7px solid #fff;
+		}
+
+		.price-table {
+
+			tr {
+
+				th {
+					position: relative;
+					padding-top: 20px;
+				}
+
+				td {
+					width: 18.33%;
+
+					&:first-child {
+						width: 45%;
+					}
+				}
+			}
+
+			.action {
+				top: -15px;
+				left: 50%;
+				width: 90px;
+				margin-left: -45px;
+				position: absolute;
+			}
+		}
+
+
+		.price-footer {
+			width: 100%;
+			display: block;
+			padding: 20px 0;
+		}
+	}
+
+	@media (min-width: $screen-md-min) {
+
+		.price-table {
+
+			tr {
+
+
+				&.price-value {
+
+					td {
+						font-size: 25px;
+						line-height: 30px;
+						font-weight: 900;
+						padding-top: 14px;
+						padding-bottom: 14px;
+					}
+				}
+
+				th {
+					font-size: 16px;
+					line-height: 20px;
+					padding: 20px 10px 10px 10px;
+				}
+
+
+				td {
+					font-size: 18px;
+					line-height: 25px;
+					padding: 10px 30px;
+				}
+
+				.action {
+					top: -15px;
+					left: 50%;
+					width: 100px;
+					margin-left: -50px;
+					position: absolute;
+				}
+			}
+		}
+	}
+}
