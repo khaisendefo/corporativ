@@ -250,30 +250,22 @@
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 	.b01::before {
-		width: 120%;
-		left: -120px;
+		background: url('../img/b01__bg-02.jpg') no-repeat;
 	}		
 } 
 
-@media (max-width: 600px) {
-   .b01::before {
-		width: 140%;
-		left: -140px;
-	 }
+@media (max-width: 550px) {
+	.b01::before {
+		width: 120%;
+		left: -100px;
+	}
 }
 
 @media (max-width: 500px) {
 	.b01::before {
-		width: 160%;
-		left: -200px;
-	}
-}
-
-@media (max-width: 400px) {
-	.b01::before {
-		width: 180%;
-    left: -250px;
+		width: 140%;
+		left: -140px;
 	}
 }
