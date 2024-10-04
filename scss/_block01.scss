@@ -254,6 +254,14 @@
 	.b01::before {
 		background: url('../img/b01__bg-02.jpg') no-repeat;
 	}		
+
+	.b01 .content-top {
+		background: rgba(120, 68, 175, 0.85);
+	}
+
+	.b01 .content-bottom {
+		background: rgba(255, 255, 255, 0.85);
+	}
 } 
 
 @media (max-width: 550px) {
